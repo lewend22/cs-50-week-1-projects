@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void){
+    int h ;
+
+    do{
+     h = get_int("Enter the height of the pyramid :  ");
+    }while( h < 1);
+     int z = h ;
+    for(int i = 0 ; i < h ;i++){
+
+    for(int s = z-1 ; s > 0 ;s--){
+        printf(" ");
+    }
+    z--;
+    for(int y = 0 ; y < i+1 ;y++){
+        printf("#");
+    }
+    printf("\n");
+    }
+    }
