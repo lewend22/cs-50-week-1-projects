@@ -1,1 +1,0 @@
-# cs-50-week-1-projects
