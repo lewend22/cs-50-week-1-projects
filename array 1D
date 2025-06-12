@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+#include <ctype.h>
+
+int arr_lang(string word);
+int main(void)
+{
+    string word1 = get_string("player 1: ");
+    string word2 = get_string("player 2: ");
+    int score1=arr_lang(word1);
+    int score2=arr_lang(word2);
+    if(score1>score2){
+        printf("player 1 win\n");
+    }
+    else if(score1<score2){
+        printf("player 2 win\n");
+    }
+    else
+    printf("Tie\n");
+}
+int arr_lang(string word)
+{
+    int score = 0 ;
+    for(int i = 0 ; i< strlen(word) ;i++){
+    if(isalpha(word[i])){
+        char upper = toupper(word[i]);
+        score+= (upper-'A');
+      }
+    }
+    return score ;
+}
